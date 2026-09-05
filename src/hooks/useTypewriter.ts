@@ -8,7 +8,8 @@ export function useTypewriter(text: string, speed = 38, startDelay = 600) {
     setDisplayed('');
     setDone(false);
     let cancelled = false;
-    let intervalId: ReturnType<typeof setInterval> | undefined;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let intervalId: any;
 
     const delayTimer = window.setTimeout(() => {
       if (cancelled) return;
